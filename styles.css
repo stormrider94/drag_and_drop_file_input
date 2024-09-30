@@ -1,0 +1,145 @@
+* {
+    box-sizing : border-box;
+    margin : 0;
+    padding : 0;
+}
+
+body {
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family : monospace;
+}
+
+.drop-area {
+    width : 280px;
+    background-color : #f0f0f0;
+    display : flex;
+    flex-wrap : wrap;
+    justify-content: center;
+    align-items : center;
+    padding : 20px;
+    border-radius : 30px;
+    border: 2px dashed #ccc;
+    padding-top : 40px;
+}
+
+.drop-area button {
+    width : 200px;
+    height : 50px;
+    border: none;
+    border: 1px solid #d80827;
+    border-radius : 20px;
+    background-color: #e91b3a;
+    box-shadow: 0 0 8px #00000040;
+    color : #f8f8f8;
+    font-size: 22px;
+    font-family : monospace;
+    font-weight : 600;
+    cursor : pointer;
+    margin-top : 20px;
+    margin-bottom : 20px;
+}
+
+.drop-area button:hover {
+    background-color : #f73653;
+
+}
+
+.drop-area p {
+    font-size : 17px;
+    color : #333;
+    margin-top : 15px;
+
+}
+
+#file-preview {
+    display : none;
+    position : absolute;
+    width : 360px;
+    height : 440px;
+    background-color: #f8f8f8;
+    border: 1px solid #c0c0c0;
+    box-shadow : 0 0 8px #00000040;
+    border-radius : 5px;
+    overflow : hidden;
+    padding : 10px;
+}
+
+.file-preview-head {
+    display : flex;
+    justify-content : space-between;
+    align-items : center;
+    padding : 5px 8px;
+}
+
+.file-preview-head h2 {
+    color : #555;
+}
+
+#file-preview-close {
+    font-size : 25px;
+    color : #555;
+    cursor : pointer;
+    font-weight : 800;
+}
+
+#file-preview-close:hover {
+    color : #e91b3a;
+
+}
+
+#file-count {
+    color : #111;
+
+}
+
+#file-count:hover{
+    text-decoration : underline;
+    cursor : pointer;
+}
+
+#file-preview-content {
+    display : flex;
+    flex-wrap : wrap;
+    gap : 5px;
+    width : 340px;
+    padding-left : 5px;
+    max-height : 320px;
+    overflow-y : auto;
+
+
+}
+
+img {
+    flex : 1;
+    border: 2px solid #eee;
+    border-radius : 3px;
+    padding : 2px;
+    cursor : pointer;
+    transition : border-color 0.5s, width 0.5s ease-in 0.5s;
+}
+
+img:hover {
+    border-color : #e91b3a;
+    opacity : 0.6;
+}
+
+#file-remove-all {
+    position : absolute;
+    bottom : 15px;
+    right : 15px;
+    background-color : #e91b3a;
+    color : #fff;
+    width : 120px;
+    text-align : center;
+    padding : 5px 10px;
+    font-size : 14px;
+    border-radius : 5px;
+    cursor : pointer;
+}
+
+#file-remove-all:hover {
+    background-color : #f73653;
+}

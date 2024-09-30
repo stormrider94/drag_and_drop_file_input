@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+<body>
+    <div class="drop-area" id="drop-area">
+        <p id="file-count"></p>
+        <p>Drop a file or</p>
+        <input type="file" id="file-input" multiple accept="image/*"
+        style="display:none;">
+        <label for="file-input">
+            <button type="button" 
+            onclick = "document.getElementById('file-input').click()">
+            Select File 
+        </button>
+        </label>
+    </div>
+    <div id="file-preview">
+        <div class="file-preview-head">
+            <h2>File Preview</h2>
+            <div id="file-preview-close">&times;</div>
+        </div>
+        <div id="file-preview-content"></div>
+        <div id="file-remove-all">Remove All</div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
